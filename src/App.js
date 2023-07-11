@@ -22,10 +22,14 @@ export default function App() {
     contextRef.current = context;
     console.log("B")
     //Draw a yellow line
+    //Start
     contextRef.current.beginPath();
     contextRef.current.moveTo(canvas.width * 0.5, canvas.height * 0.5);
     setIsDrawing(true);
+    //Draw
     contextRef.current.lineTo(canvas.width * 0.7, canvas.height * 0.7);
+    contextRef.current.stroke();
+    //End  
     contextRef.current.closePath();
     setIsDrawing(false);
     console.log("C")
