@@ -3,11 +3,11 @@
   text-align: center;
 }
 
-.container {
+.overallcontainer {
   position: relative;
 }
 
-.canvas {
+.primarycanvas {
   position: absolute;
   top: 0;
   left: 0;

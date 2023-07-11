@@ -15,33 +15,6 @@ const CssTest1 = () => {
 	</>
  )
 }
-/*
-const RectangleTest1 = () => {
- const canvasRefRectangle = useRef<HTMLCanvasElement | null>(null);
-
-  useEffect(() => {
-    if (canvasRefRectangle.current) {
-        const ctx = canvasRefRectangle.current.getContext("2d");
-        ctx?.strokeRect(200, 200, 40, 50);
-    }
-  }, []);
-
- return (
-	<>
-	<h2>
-		This is CssTestRectangleTest1
-	</h2>
-     <canvas
-          ref={canvasRefRectangle}
-          width={"400"}
-          height={"350"}
-          style={{ border: "2px solid black" }}
-        />
-	</>
-  );
-};
-*/
-
 
 
 export default function App() {
@@ -52,6 +25,7 @@ export default function App() {
 
   useEffect(() => {
     console.log("A")
+    /*
     const canvas = canvasRef.current;
     canvas.width = window.innerWidth * 2;
     canvas.height = window.innerHeight * 2;
@@ -64,7 +38,9 @@ export default function App() {
     context.strokeStyle = "red";
     context.lineWidth = 5;
     contextRef.current = context;
+    */
     console.log("B")
+    /*
     //Draw a yellow line
     //Start
     contextRef.current.beginPath();
@@ -76,6 +52,7 @@ export default function App() {
     //End  
     contextRef.current.closePath();
     setIsDrawing(false);
+    */
     console.log("C")
   }, []);
 
@@ -102,16 +79,18 @@ export default function App() {
 
   // return <canvas onMouseDown={startDrawing} onMouseUp={finishDrawing} onMouseMove={draw} ref={canvasRef} />;
   return (
-    <div className="containerforcsstest">
-      <h2>V1.1.3</h2>
+    <div className="overallcontainer">
+      <h2>V1.2.0</h2>
 	  <CssTest1 />
+      {/*
       <canvas
         onMouseDown={startDrawing}
         onMouseUp={finishDrawing}
         onMouseMove={draw}
         ref={canvasRef}
-        className="canvas"
+        className="primarycanvas"
       />
+      */}
       <video loop width="500px">
         <source
           src="https://giant.gfycat.com/VerifiableTerrificHind.mp4"
