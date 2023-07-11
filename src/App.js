@@ -1,7 +1,31 @@
 import React, { useRef, useState, useEffect } from "react";
 import "./styles.css";
 
+
+const RectangleTest1 = () => {
+ const canvasRef = useRef<HTMLCanvasElement | null>(null);
+
+  useEffect(() => {
+ if (canvasRef.current) {
+ const ctx = canvasRef.current.getContext("2d");
+      ctx?.strokeRect(200, 200, 40, 50);
+    }
+  }, []);
+
+ return (
+ <canvas
+      ref={canvasRef}
+      width="400"
+      height="350"
+      style={{ border: "2px solid black" }}
+    />
+  );
+};
+
+
+
 export default function App() {
+
   const canvasRef = useRef(null);
   const contextRef = useRef(null);
   const [isDrawing, setIsDrawing] = useState(false);
@@ -60,6 +84,7 @@ export default function App() {
   return (
     <div className="container">
       <h2>V1.1.2</h2>
+	  <RectangleTest1 />
       <canvas
         onMouseDown={startDrawing}
         onMouseUp={finishDrawing}
