@@ -1,7 +1,7 @@
 {
   "name": "react",
   "version": "1.0.0",
-  "homepage":"https://shearichard.github.io/react-draw-on-video-sandbox"
+  "homepage":"https://shearichard.github.io/react-draw-on-video-sandbox",
   "description": "React example starter project",
   "keywords": [
     "react",
