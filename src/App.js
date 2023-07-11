@@ -6,19 +6,19 @@ const RectangleTest1 = () => {
  const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   useEffect(() => {
- if (canvasRef.current) {
- const ctx = canvasRef.current.getContext("2d");
-      ctx?.strokeRect(200, 200, 40, 50);
+    if (canvasRef.current) {
+        const ctx = canvasRef.current.getContext("2d");
+        ctx?.strokeRect(200, 200, 40, 50);
     }
   }, []);
 
  return (
- <canvas
-      ref={canvasRef}
-      width="400"
-      height="350"
-      style={{ border: "2px solid black" }}
-    />
+     <canvas
+          ref={canvasRef}
+          width="400"
+          height="350"
+          style={{ border: "2px solid black" }}
+        />
   );
 };
 
@@ -83,7 +83,7 @@ export default function App() {
   // return <canvas onMouseDown={startDrawing} onMouseUp={finishDrawing} onMouseMove={draw} ref={canvasRef} />;
   return (
     <div className="container">
-      <h2>V1.1.2</h2>
+      <h2>V1.1.3</h2>
 	  <RectangleTest1 />
       <canvas
         onMouseDown={startDrawing}
