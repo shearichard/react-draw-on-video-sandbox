@@ -2,25 +2,45 @@ import React, { useRef, useState, useEffect } from "react";
 import "./styles.css";
 
 
+const CssTest1 = () => {
+ return (
+	<>
+	<h2>
+		This is CssTest1
+	</h2>
+	<div id="containerforcsstest">
+	  <canvas id="canvasforcsstest"></canvas>
+	  <div id="overlay">This div is over the canvas</div>
+	</div>
+	</>
+ )
+}
+/*
 const RectangleTest1 = () => {
- const canvasRef = useRef<HTMLCanvasElement | null>(null);
+ const canvasRefRectangle = useRef<HTMLCanvasElement | null>(null);
 
   useEffect(() => {
-    if (canvasRef.current) {
-        const ctx = canvasRef.current.getContext("2d");
+    if (canvasRefRectangle.current) {
+        const ctx = canvasRefRectangle.current.getContext("2d");
         ctx?.strokeRect(200, 200, 40, 50);
     }
   }, []);
 
  return (
+	<>
+	<h2>
+		This is CssTestRectangleTest1
+	</h2>
      <canvas
-          ref={canvasRef}
-          width="400"
-          height="350"
+          ref={canvasRefRectangle}
+          width={"400"}
+          height={"350"}
           style={{ border: "2px solid black" }}
         />
+	</>
   );
 };
+*/
 
 
 
@@ -82,9 +102,9 @@ export default function App() {
 
   // return <canvas onMouseDown={startDrawing} onMouseUp={finishDrawing} onMouseMove={draw} ref={canvasRef} />;
   return (
-    <div className="container">
+    <div className="containerforcsstest">
       <h2>V1.1.3</h2>
-	  <RectangleTest1 />
+	  <CssTest1 />
       <canvas
         onMouseDown={startDrawing}
         onMouseUp={finishDrawing}
