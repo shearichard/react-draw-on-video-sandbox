@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/react-draw-on-video-sandbox/static/css/main.cbd5744a.css",
-    "main.js": "/react-draw-on-video-sandbox/static/js/main.ce46dc67.js",
+    "main.js": "/react-draw-on-video-sandbox/static/js/main.8ade8780.js",
     "index.html": "/react-draw-on-video-sandbox/index.html",
     "main.cbd5744a.css.map": "/react-draw-on-video-sandbox/static/css/main.cbd5744a.css.map",
-    "main.ce46dc67.js.map": "/react-draw-on-video-sandbox/static/js/main.ce46dc67.js.map"
+    "main.8ade8780.js.map": "/react-draw-on-video-sandbox/static/js/main.8ade8780.js.map"
   },
   "entrypoints": [
     "static/css/main.cbd5744a.css",
-    "static/js/main.ce46dc67.js"
+    "static/js/main.8ade8780.js"
   ]
 }
