@@ -21,6 +21,13 @@ export default function App() {
     context.lineWidth = 5;
     contextRef.current = context;
     console.log("B")
+    //Draw a yellow line
+    contextRef.current.beginPath();
+    contextRef.current.moveTo(canvas.width * 0.5, canvas.height * 0.5);
+    setIsDrawing(true);
+    contextRef.current.moveTo(canvas.width * 0.7, canvas.height * 0.7);
+    contextRef.current.closePath();
+    setIsDrawing(false);
   }, []);
 
   const startDrawing = ({ nativeEvent }) => {
