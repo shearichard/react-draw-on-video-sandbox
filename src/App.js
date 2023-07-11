@@ -46,8 +46,8 @@ export default function App() {
 
   // return <canvas onMouseDown={startDrawing} onMouseUp={finishDrawing} onMouseMove={draw} ref={canvasRef} />;
   return (
-    <h2>V1.1</h2>
     <div className="container">
+      <h2>V1.1</h2>
       <canvas
         onMouseDown={startDrawing}
         onMouseUp={finishDrawing}
