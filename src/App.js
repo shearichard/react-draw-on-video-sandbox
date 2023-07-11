@@ -7,6 +7,7 @@ export default function App() {
   const [isDrawing, setIsDrawing] = useState(false);
 
   useEffect(() => {
+    console.log("A")
     const canvas = canvasRef.current;
     canvas.width = window.innerWidth * 2;
     canvas.height = window.innerHeight * 2;
@@ -19,6 +20,7 @@ export default function App() {
     context.strokeStyle = "red";
     context.lineWidth = 5;
     contextRef.current = context;
+    console.log("B")
   }, []);
 
   const startDrawing = ({ nativeEvent }) => {
