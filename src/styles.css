@@ -18,9 +18,11 @@
 /*START Based on https://stackoverflow.com/a/26793302/364088*/
 #containerforcsstest {
   position: relative;
+  /* Positioning test starts */
   top: 2em;
   left: 2em;
   padding: 0 1em;
+  /* Positioning test ends */
 }
 #containerforcsstest canvas, #overlay {
   position: absolute;
