@@ -77,21 +77,32 @@ export default function App() {
     contextRef.current.stroke();
   };
 
-  // return <canvas onMouseDown={startDrawing} onMouseUp={finishDrawing} onMouseMove={draw} ref={canvasRef} />;
+//
+// return <canvas onMouseDown={startDrawing} onMouseUp={finishDrawing} onMouseMove={draw} ref={canvasRef} />;
+//<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+// <circle cx="50" cy="50" r="50" />
+//</svg>
+//<video loop className="viddisplay">
+//<source
+//src="https://giant.gfycat.com/VerifiableTerrificHind.mp4"
+//type="video/mp4"
+///>
+//
+//https://stackoverflow.com/a/10124075/364088
   return (
     <div className="overallcontainer">
-      <h2>V1.2.3</h2>
-    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="50" cy="50" r="50" />
-    </svg>
-
-      <CssTest2/>
-      <video loop className="viddisplay">
-        <source
-          src="https://giant.gfycat.com/VerifiableTerrificHind.mp4"
-          type="video/mp4"
-        />
-      </video>
+      <h2>V1.3.0</h2>
+      <div id="test_canvas">
+          <video loop id="test_videoContainer">
+              <source
+                src="https://giant.gfycat.com/VerifiableTerrificHind.mp4"
+                type="video/mp4"
+              />
+          </video>
+          <svg id="test_svgContainer">
+              <ellipse id="test_ellipse" cx="50%" cy="50%" rx="15%" ry="30%"  />
+          </svg>
+      </div>
     </div>
   );
 }
