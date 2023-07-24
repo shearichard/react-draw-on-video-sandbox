@@ -100,7 +100,7 @@ export default function App() {
               />
           </video>
           <svg id="test_svgContainer">
-              <ellipse id="test_ellipse" cx="50%" cy="50%" rx="15%" ry="30%"  />
+              <ellipse id="test_ellipse" cx="50%" cy="40%" rx="15%" ry="35%"  />
           </svg>
       </div>
     </div>
