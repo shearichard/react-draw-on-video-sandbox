@@ -80,9 +80,13 @@ export default function App() {
   // return <canvas onMouseDown={startDrawing} onMouseUp={finishDrawing} onMouseMove={draw} ref={canvasRef} />;
   return (
     <div className="overallcontainer">
-      <h2>V1.2.1</h2>
-      <CssTest2 />
-      <video loop width="500px">
+      <h2>V1.2.3</h2>
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="50" />
+    </svg>
+
+      <CssTest2/>
+      <video loop className="viddisplay">
         <source
           src="https://giant.gfycat.com/VerifiableTerrificHind.mp4"
           type="video/mp4"
