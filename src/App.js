@@ -17,6 +17,45 @@ const CssTest1 = () => {
 }
 
 
+const CssTest2 = () => {
+ return (
+    <>
+      <div id="containerforcsstest">
+        <canvas id="canvasforcsstest">
+        </canvas>
+          <div className="circle">
+            <p className="text">Circle text</p>
+          </div>
+      </div>
+    </>
+ )
+}
+const CssTest3 = () => {
+ return (
+    <>
+      <div id="containerforcsstest">
+        <canvas id="canvasforcsstest"></canvas>
+        <CircleTest />
+      </div>
+    </>
+ )
+}
+function CircleTest(){
+  return(
+    <div height="110" width="500">
+      <circle
+        cx="50"
+        cy="55"
+        r="45"
+        fill="none"
+        stroke="#F0CE01"
+        strokeWidth="4"
+      />
+    </div>
+  );
+ }
+
+
 export default function App() {
 
   const canvasRef = useRef(null);
@@ -81,7 +120,7 @@ export default function App() {
   return (
     <div className="overallcontainer">
       <h2>V1.2.0</h2>
-	  <CssTest1 />
+	  <CssTest2 />
       {/*
       <canvas
         onMouseDown={startDrawing}
