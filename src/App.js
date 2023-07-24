@@ -2,21 +2,6 @@ import React, { useRef, useState, useEffect } from "react";
 import "./styles.css";
 
 
-const CssTest1 = () => {
- return (
-	<>
-	<h2>
-		This is CssTest1
-	</h2>
-	<div id="containerforcsstest">
-	  <canvas id="canvasforcsstest"></canvas>
-	  <div id="overlay">This div is over the canvas</div>
-	</div>
-	</>
- )
-}
-
-
 const CssTest2 = () => {
  return (
     <>
@@ -30,30 +15,6 @@ const CssTest2 = () => {
     </>
  )
 }
-const CssTest3 = () => {
- return (
-    <>
-      <div id="containerforcsstest">
-        <canvas id="canvasforcsstest"></canvas>
-        <CircleTest />
-      </div>
-    </>
- )
-}
-function CircleTest(){
-  return(
-    <div height="110" width="500">
-      <circle
-        cx="50"
-        cy="55"
-        r="45"
-        fill="none"
-        stroke="#F0CE01"
-        strokeWidth="4"
-      />
-    </div>
-  );
- }
 
 
 export default function App() {
@@ -119,17 +80,8 @@ export default function App() {
   // return <canvas onMouseDown={startDrawing} onMouseUp={finishDrawing} onMouseMove={draw} ref={canvasRef} />;
   return (
     <div className="overallcontainer">
-      <h2>V1.2.0</h2>
-	  <CssTest2 />
-      {/*
-      <canvas
-        onMouseDown={startDrawing}
-        onMouseUp={finishDrawing}
-        onMouseMove={draw}
-        ref={canvasRef}
-        className="primarycanvas"
-      />
-      */}
+      <h2>V1.2.1</h2>
+      <CssTest2 />
       <video loop width="500px">
         <source
           src="https://giant.gfycat.com/VerifiableTerrificHind.mp4"
