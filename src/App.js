@@ -22,6 +22,9 @@ export default function App() {
   const canvasRef = useRef(null);
   const contextRef = useRef(null);
   const [isDrawing, setIsDrawing] = useState(false);
+  const [isBig, setIsBig] = useState(true);
+  const BIG = "test_canvas_big";
+  const NOTBIG = "test_canvas_small";
 
   useEffect(() => {
     console.log("A")
@@ -76,6 +79,9 @@ export default function App() {
     contextRef.current.lineTo(offsetX, offsetY);
     contextRef.current.stroke();
   };
+  const toggleCanvasSize = () => {
+    setIsBig(!isBig);
+  }
 
 //
 // return <canvas onMouseDown={startDrawing} onMouseUp={finishDrawing} onMouseMove={draw} ref={canvasRef} />;
@@ -91,8 +97,8 @@ export default function App() {
 //https://stackoverflow.com/a/10124075/364088
   return (
     <div className="overallcontainer">
-      <h2>V1.3.0</h2>
-      <div id="test_canvas">
+      <h2>V1.4.0</h2>
+      <div id={ isBig ? BIG : NOTBIG }>
           <video loop id="test_videoContainer">
               <source
                 src="https://giant.gfycat.com/VerifiableTerrificHind.mp4"
@@ -103,6 +109,7 @@ export default function App() {
               <ellipse id="test_ellipse" cx="50%" cy="40%" rx="15%" ry="35%"  />
           </svg>
       </div>
+      <button id="toggleButton" onClick={toggleCanvasSize}>Toggle Canvas Size</button>
     </div>
   );
 }

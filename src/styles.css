@@ -2,11 +2,8 @@
   font-family: sans-serif;
   text-align: center;
 }
-
-.overallcontainer {
-  position: relative;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Oxygen, Cantarell, sans-serif;
-}
+#toggleButton {
+  margin-top: 3em; text-align: center; text-size: 4em; width: 20em; height: 4em; } .overallcontainer { position: relative; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Oxygen, Cantarell, sans-serif; }
 
 .primarycanvas {
   position: absolute;
@@ -53,8 +50,8 @@ div#overlay {
   color: white;
 }
 /*END Based on https://stackoverflow.com/a/64884438/364088 */
-#test_canvas{ position:relative; width:960px; height:480px; }
-/*#test_canvas{ position:relative; width:480px; height:240px; }*/
+#test_canvas_big{ position:relative; width:960px; height:480px; }
+#test_canvas_small{ position:relative; width:480px; height:240px; }
 #test_videoContainer{ position:absolute; width:100%; height:100%; z-index:1 }
 #test_svgContainer{ position:absolute; width:100%; height:100%; z-index:2 }
 #test_ellipse{stroke:yellow; stroke-width:3; fill-opacity:.01;}
