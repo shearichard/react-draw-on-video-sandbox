@@ -19,12 +19,25 @@ const CssTest2 = () => {
 
 export default function App() {
 
+  const elRef = useRef();
   const canvasRef = useRef(null);
   const contextRef = useRef(null);
   const [isDrawing, setIsDrawing] = useState(false);
   const [isBig, setIsBig] = useState(true);
   const BIG = "test_canvas_big";
   const NOTBIG = "test_canvas_small";
+
+
+  useEffect(() => {
+    console.log("ABC")
+    console.log(elRef?.current?.clientWidth)
+    console.log("DEF")
+    if (!elRef?.current?.clientHeight) {
+      return;
+    }
+    //1setHeight(elRef?.current?.clientHeight);
+  }, [elRef?.current?.clientHeight]);
+
 
   useEffect(() => {
     console.log("A")
@@ -98,7 +111,7 @@ export default function App() {
   return (
     <div className="overallcontainer">
       <h2>V1.4.0</h2>
-      <div id={ isBig ? BIG : NOTBIG }>
+      <div id={ isBig ? BIG : NOTBIG } ref={elRef}>
           <video loop id="test_videoContainer">
               <source
                 src="https://giant.gfycat.com/VerifiableTerrificHind.mp4"
